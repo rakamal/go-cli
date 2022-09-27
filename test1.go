@@ -68,7 +68,7 @@ func createAWSVM() {
 	anyVar := "aws ec2 run-instances --image-id ami-052efd3df9dad4825 --count 1 --instance-type t2.micro --key-name awskey1 --security-group-ids " + myvar
 	log.Printf("Output of sg command : %s\n", myvar)
      fmt.Println("Created security grp")
-     cmd2 := exec.Command("bash","-c","$anyVar")
+     cmd2 := exec.Command("bash","-c","anyVar")
      log.Printf("install_kubectl:CMD>>:%v\n", cmd2)
 	cmd2.Stderr = &stderr
 	outpu, err := cmd2.Output()
